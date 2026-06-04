@@ -1,0 +1,153 @@
+.list-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.list-row:hover {
+  background-color: var(--darkgrey);
+  transition: all 0.3s;
+}
+
+.list-row td {
+  text-align: left;
+  width: 18%;
+}
+
+/* Image column */
+.td-image {
+  width: min-content !important;
+}
+
+/* Alignments */
+.td-center-align {
+  text-align: center;
+}
+
+.td-right-align {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  
+}
+
+/* Watchlist Icon (Desktop default) */
+.watchlist-icon {
+  color: var(--green);
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+.watchlist-icon:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+/* Red coin support */
+.watchlist-icon-red {
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+.watchlist-icon-red:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+/* Hide mobile market cap by default */
+.mobile-td-mkt {
+  display: none;
+}
+
+
+
+/* ===== Tablet View ===== */
+@media only screen and (max-width: 1000px) {
+
+  .td-image img {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  .price-chip {
+    min-width: 2rem !important;
+    font-size: 0.6rem !important;
+    border-width: 2px !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .td-icon {
+    display: none !important;
+  }
+
+  .watchlist-icon {
+    font-size: 1rem !important;
+    padding: 0.25rem;
+  }
+}
+
+
+/* ===== Mobile View ===== */
+@media only screen and (max-width: 800px) {
+
+  .list-row {
+    margin-top: 1rem;
+    gap: 0rem !important;
+    padding: 0rem;
+  }
+
+  .td-total-volume {
+    display: none !important;
+  }
+
+  .desktop-td-mkt {
+    display: none !important;
+  }
+
+  .mobile-td-mkt {
+    display: block;
+  }
+
+  .coin-price {
+    font-size: 0.8rem !important;
+    margin-right: 0.5rem;
+  }
+
+  .coin-symbol,
+  .coin-name {
+    font-size: 80% !important;
+  }
+
+  /* make the watchlist star bigger on mobile */
+  .watchlist-icon {
+    font-size: 1.5rem !important;
+    padding: 0.4rem;
+  }
+
+  /* tablet views should also enlarge the star */
+  @media only screen and (max-width: 1000px) and (min-width: 801px) {
+    .watchlist-icon {
+      font-size: 1.8rem !important;
+      padding: 0.45rem;
+    }
+  }
+}
+
+
+/* ===== Small Mobile ===== */
+@media only screen and (max-width: 400px) {
+
+  .price-chip {
+    display: none;
+  }
+
+}
